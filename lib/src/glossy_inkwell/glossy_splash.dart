@@ -68,7 +68,7 @@ class GlossySplashPainter extends CustomPainter {
   final Offset? tapPosition;
 
   GlossySplashPainter({required this.animation, required this.tapPosition})
-      : super(repaint: animation);
+    : super(repaint: animation);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -76,18 +76,18 @@ class GlossySplashPainter extends CustomPainter {
 
     final paint = Paint()
       ..shader =
-      RadialGradient(
-        colors: [
-          Colors.white.withOpacity(0.3),
-          Colors.blueAccent.withOpacity(0.0),
-        ],
-        stops: const [0.0, 1.0],
-      ).createShader(
-        Rect.fromCircle(
-          center: tapPosition!,
-          radius: animation.value * 150,
-        ),
-      );
+          RadialGradient(
+            colors: [
+              Colors.white.withValues(alpha: 0.3),
+              Colors.blueAccent.withValues(alpha: 0.0),
+            ],
+            stops: const [0.0, 1.0],
+          ).createShader(
+            Rect.fromCircle(
+              center: tapPosition!,
+              radius: animation.value * 150,
+            ),
+          );
 
     canvas.drawCircle(tapPosition!, animation.value * 150, paint);
   }

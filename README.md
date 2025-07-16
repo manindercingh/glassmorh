@@ -66,7 +66,7 @@ The main implementation lives in:
 
 ### 🖼️ Welcome to Glassmorph
 
-![Welcome to Glassmorph](screenshots/welcome_glassmorph.jpg)
+![Welcome to Glassmorph](https://raw.githubusercontent.com/manindercingh/glassmorh/main/screenshots/welcome_glassmorph.jpg)
 
 ---
 
