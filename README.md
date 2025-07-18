@@ -6,10 +6,6 @@ A lightweight and customizable Flutter widget for applying **Glassmorphism** eff
 [![Pub Version](https://img.shields.io/pub/v/glassmorph)](https://pub.dev/packages/glassmorph)
 [![Buy Me a Coffee](https://img.shields.io/badge/☕-Buy%20Me%20a%20Coffee-orange)](https://coff.ee/manindersingh)
 
-### 🖼️ Welcome to Glassmorph
-
-<img src="https://raw.githubusercontent.com/manindercingh/glassmorh/main/screenshots/welcome_glassmorph.jpg" width="250" alt="Welcome to Glassmorph" />
-
 ## ✨ Features
 
 - Customizable blur intensity
@@ -47,6 +43,10 @@ Glassmorph(
   ),
 )
 ```
+
+### 🖼️ Welcome to Glassmorph
+
+<img src="https://raw.githubusercontent.com/manindercingh/glassmorh/main/screenshots/welcome_glassmorph.jpg" width="250" alt="Welcome to Glassmorph" />
 
 ## 📄 Parameters
 

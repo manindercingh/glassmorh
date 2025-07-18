@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:glassmorph/src/glossy_inkwell/glossy_splash.dart';
 
 import 'glassmorph_config.dart';
 
@@ -13,11 +14,13 @@ class Glassmorph extends StatelessWidget {
   final Color? glassBGColor;
   final Color? glassBorder;
   final bool enableGlassBorder;
+  final void Function()? onTap;
 
   const Glassmorph({
     super.key,
     required this.child,
     this.padding,
+    this.onTap,
     this.glassBGColor,
     this.enableGlassBorder = false,
     this.glassBorder,
@@ -49,7 +52,7 @@ class Glassmorph extends StatelessWidget {
                 ? Border.all(color: config.borderColor!, width: 1.5)
                 : null,
           ),
-          child: child,
+          child: GlossySplashButton(onTap: onTap, child: child),
         ),
       ),
     );

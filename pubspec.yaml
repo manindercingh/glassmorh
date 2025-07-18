@@ -1,6 +1,6 @@
 name: glassmorph
 description: "A customizable, lightweight Flutter widget for applying glassmorphism   UI effects using blur, transparency, and optional borders."
-version: 0.0.6
+version: 0.0.7
 homepage: https://coff.ee/manindersingh
 
 environment:

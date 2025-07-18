@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class GlossySplashButton extends StatefulWidget {
-  const GlossySplashButton({super.key});
+  final Widget child;
+  final void Function()? onTap;
+
+  const GlossySplashButton({
+    required this.child,
+    required this.onTap,
+    super.key,
+  });
 
   @override
   State<GlossySplashButton> createState() => _GlossySplashButtonState();
@@ -39,7 +46,7 @@ class _GlossySplashButtonState extends State<GlossySplashButton>
   Widget build(BuildContext context) {
     return GestureDetector(
       onTapDown: (details) => _startSplash(details.globalPosition),
-      onTap: () => debugPrint("Glossy button tapped!"),
+      onTap: widget.onTap,
       child: CustomPaint(
         painter: GlossySplashPainter(
           animation: _animation,
@@ -53,10 +60,7 @@ class _GlossySplashButtonState extends State<GlossySplashButton>
             color: Colors.blue[800],
             borderRadius: BorderRadius.circular(16),
           ),
-          child: const Text(
-            "Glossy Button",
-            style: TextStyle(color: Colors.white, fontSize: 18),
-          ),
+          child: widget.child,
         ),
       ),
     );
